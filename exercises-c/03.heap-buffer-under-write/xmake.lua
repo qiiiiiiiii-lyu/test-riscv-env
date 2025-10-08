@@ -46,7 +46,7 @@ target_end()
 on_run(function (target)
     local targetfile = target:targetfile()
     local simulator = "/usr/local/bin/mpact_rv32g_sim"
-    local rundir = "../../submit/exercises-c/03.heap-buffer-under-write/runs/run_" .. os.date("%Y%m%d_%H%M%S")
+    local rundir = "../../submit-riscv/exercises-c/03.heap-buffer-under-write/runs/run_" .. os.date("%Y%m%d_%H%M%S")
     os.mkdir(rundir)
 
     local args = {
@@ -58,7 +58,7 @@ on_run(function (target)
         
         
         print("Running in debug mode...")
-        local log_file = "../../submit/exercises-c/03.heap-buffer-under-write/debug"
+        local log_file = "../../submit-riscv/exercises-c/03.heap-buffer-under-write/debug"
         local log_time = os.date("%Y-%m-%d %H:%M:%S")
         local log_line = string.format("debug_time: %s\n", log_time)
 
